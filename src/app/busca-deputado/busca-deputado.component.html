@@ -1,0 +1,20 @@
+<div class="container-pesquisa">
+  <div>
+    <label for="pesquisa1">nome</label>
+    <input type="text" class="form-control" id="pesquisa1" placeholder="Nome do deputado" #nome>
+  </div>
+  <div>
+    <label for="pesquisa2">partido</label>
+    <input type="text" class="form-control" id="pesquisa2" placeholder="Nome do partido" #partido>
+  </div>
+  <div>
+    <button type="button" class="btn btn-outline-dark" (click)="pesquisa(nome.value, partido.value)">pesquisar</button>
+  </div>
+</div>
+<div>
+  <ul class="dps" *ngFor="let dps of deputados">
+    <li><img [src]="dps.urlFoto"></li>
+    <li>{{dps.nome}}</li>
+    <li>{{dps.siglaPartido}}-{{dps.siglaUf}}</li>
+  </ul>
+</div>

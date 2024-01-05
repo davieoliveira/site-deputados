@@ -1,0 +1,8 @@
+<div class="center-container">
+  <ul class="dps" *ngFor="let dps of deputados">
+    <li><img [src]="dps.urlFoto"></li>
+    <li>{{dps.nome}}</li>
+    <li>{{dps.siglaPartido}}-{{dps.siglaUf}}</li>
+  </ul>
+</div>
+
